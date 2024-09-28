@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorie Counter</title>
+    <style>
+        /* styles.css */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #b4e3e2, #FBE9D0, #b4e3e2, #FBE9D0), 
+              url("creator/hja.jpg");
+  background-size: cover;
+  background-blend-mode: overlay;
+  filter: blur(1px); /* Adjust the value to control the blur intensity */
+  z-index: -1; /* Ensures the background stays behind the content */
+}
+nav {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            top: 0;
+            position: fixed;
+            display: flex;
+            width: 100%;
+            z-index: 1000;
+            background: linear-gradient(140deg,#FBE9D0, #b4e3e2, #FBE9D0, #b4e3e2);
+            justify-content: space-around;
+            transition: 1.5s;
+            align-items: center;
+        }
+        nav ul {
+            display: flex;
+            align-items: center;
+        }
+        nav ul li {
+            list-style: none;
+            margin: 10px 20px;
+        }
+        nav ul li a {
+            padding: 2px 10px;
+            color: #2e2e2e;
+            cursor: pointer;
+            transition: .6s ease, transform 0.4s ease;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            color: #fff;
+            border-radius: 5px;
+            transform: scale(1.1);
+            font-size: 20px;
+            background: linear-gradient(to right, #E64833, #bc8c80);
+        }
+        .active {
+            color: #fff;
+            font-size: 20px;
+            border-radius: 5px;
+            background: linear-gradient(to right, #E64833, #bc8c80);
+        }
+
+        .get-started {
+            margin-left: 50px;
+            padding: 5px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 20px;
+            transition: background-color 0.7s ease, transform 0.4s ease;
+            background: linear-gradient(to right, #E64833, #bc8c80);
+            color: #fff;
+        }
+        .get-started:hover {
+            color: #2e2e2e;
+            transform: scale(1.1);
+            background: #c6a199;
+        }
+        .logo img {
+            width: 75px;
+            cursor: pointer;
+            transition: all 1s;
+        }
+        a, button {
+            float: left;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 500;
+            font-size: 15px;
+            color: #272525;
+            display: block;
+            text-decoration: none;
+            text-align: center;
+        }
+        .head-container {
+            margin-top: 245px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-around;
+        }
+        header {
+            text-align: center;
+            padding: 145px 20px 50px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: linear-gradient(100deg,#b4e3e2, #FBE9D0, #b4e3e2, #FBE9D0);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        select, input[type="number"] {
+            padding: 10px;
+            width: 45%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px;
+            background: linear-gradient(to right, #E64833, #bc8c80);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: linear-gradient(to right,  #d54530, #1b2a33);
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo"><a href="index.html"><img src="icon/icon.jpeg" alt="logo"></a></div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#services_section">Utility</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="mapCompo.html">Map</a></li>
+            <li><a href="help.html">Help</a></li>
+        </ul>
+    </nav>
+    <header>
+        <div class="container">
+        <h1>Calorie Counter</h1>
+        <form id="calorie-form">
+            <select id="food-item" required>
+                <option value="" disabled selected>Select Food Item</option>
+                <option value="Apple">Apple - 95</option>
+                <option value="Banana">Banana - 105</option>
+                <option value="Orange">Orange - 62</option>
+                <option value="Chicken Breast">Chicken Breast - 165</option>
+                <option value="Broccoli">Broccoli - 55</option>
+                <option value="Rice (1 cup)">Rice (1 cup) - 206</option>
+                <option value="Egg">Egg - 68</option>
+                <option value="Milk (1 cup)">Milk (1 cup) - 103</option>
+                <option value="Carrot">Carrot - 41</option>
+<option value="Almonds (1 oz)">Almonds (1 oz) - 164</option>
+<option value="Potato">Potato - 163</option>
+<option value="Salmon">Salmon - 206</option>
+<option value="Quinoa (1 cup)">Quinoa (1 cup) - 222</option>
+<option value="Greek Yogurt (1 cup)">Greek Yogurt (1 cup) - 100</option>
+<option value="Tofu (1/2 cup)">Tofu (1/2 cup) - 94</option>
+<option value="Cheddar Cheese (1 oz)">Cheddar Cheese (1 oz) - 113</option>
+<option value="Peanut Butter (2 tbsp)">Peanut Butter (2 tbsp) - 188</option>
+<option value="Oatmeal (1 cup)">Oatmeal (1 cup) - 154</option>
+<option value="Spinach (1 cup)">Spinach (1 cup) - 7</option>
+<option value="Shrimp">Shrimp - 84</option>
+<option value="Blueberries (1 cup)">Blueberries (1 cup) - 84</option>
+<option value="Pasta (1 cup)">Pasta (1 cup) - 200</option>
+<option value="Honey">Honey - 64</option>
+<option value="Chickpeas (1 cup)">Chickpeas (1 cup) - 269</option>
+<option value="Lentils (1 cup)">Lentils (1 cup) - 230</option>
+<option value="Cucumber">Cucumber - 16</option>
+<option value="Walnuts (1 oz)">Walnuts (1 oz) - 185</option>
+<option value="Bell Pepper">Bell Pepper - 24</option>
+
+            </select>
+            <input type="number" id="quantity" placeholder="Quantity" min="1" required>
+            <button type="submit">Add</button>
+        </form>
+        <h2>Total Calories: <span id="total-calories">0</span></h2>
+        <ul id="calorie-list"></ul>
+    </div>
+</header>
+    <script>
+        // script.js
+        document.getElementById('calorie-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const foodItem = document.getElementById('food-item').value;
+            const quantity = parseInt(document.getElementById('quantity').value);
+            const totalCaloriesElement = document.getElementById('total-calories');
+            const calorieList = document.getElementById('calorie-list');
+
+            // Map of food items to their calorie values
+            const calorieMap = {
+                "Apple": 95,
+                "Banana": 105,
+                "Orange": 62,
+                "Chicken Breast": 165,
+                "Broccoli": 55,
+                "Rice (1 cup)": 206,
+                "Egg": 68,
+                "Milk (1 cup)": 103,
+                "Carrot": 41,
+    "Almonds (1 oz)": 164,
+    "Potato": 163,
+    "Salmon": 206,
+    "Quinoa (1 cup)": 222,
+    "Greek Yogurt (1 cup)": 100,
+    "Tofu (1/2 cup)": 94,
+    "Cheddar Cheese (1 oz)": 113,
+    "Peanut Butter (2 tbsp)": 188,
+    "Oatmeal (1 cup)": 154,
+    "Spinach (1 cup)": 7,
+    "Shrimp": 84,
+    "Blueberries (1 cup)": 84,
+    "Pasta (1 cup)": 200,
+    "Honey": 64,
+    "Chickpeas (1 cup)": 269,
+    "Lentils (1 cup)": 230,
+    "Cucumber": 16,
+    "Walnuts (1 oz)": 185,
+    "Bell Pepper": 24
+            };
+
+            // Calculate calories for the selected food item
+            const calories = calorieMap[foodItem] * quantity;
+
+            // Update total calories
+            let totalCalories = parseInt(totalCaloriesElement.textContent);
+            totalCalories += calories;
+            totalCaloriesElement.textContent = totalCalories;
+
+            // Add food item to the list
+            const listItem = document.createElement('li');
+            listItem.textContent = `${foodItem} (x${quantity}): ${calories} calories`;
+            calorieList.appendChild(listItem);
+
+            // Clear input fields
+            document.getElementById('food-item').selectedIndex = 0;
+            document.getElementById('quantity').value = '';
+        });
+    </script>
+</body>
+</html>
