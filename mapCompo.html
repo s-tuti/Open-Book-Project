@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Local Places</title>
+
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="map.css">
+
+  <!-- Leaflet CSS for map styling -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+  <header id="header">
+    <nav>
+      <div class="logo"><a href="index.html" ><img src="icon/icon.jpeg" alt="logo"></a></div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#services_section">Utility</a></li>
+        <li><a href="#team_section">Help</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="mapCompo.html">Map</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <h1>Find Nearby Restaurants and Grocery Stores</h1>
+
+  <div class="input-group">
+    <label for="latitude">Latitude: </label>
+    <input type="text" id="latitude" placeholder="Enter latitude">
+    <label for="longitude">Longitude: </label>
+    <input type="text" id="longitude" placeholder="Enter longitude">
+    <button onclick="locateByLatLng()">Locate by Coordinates</button>
+  </div>
+
+  <div id="map" style="height: 600px;"></div>
+
+  <!-- New Section for Delivery Options -->
+   <div class="delivery-options">
+    <h2>Delivery Options</h2>
+    <div class="delivery-cards">
+      <div class="delivery-card">
+        <img src="creator/blinkit.png" alt="Blinkit Logo" class="logo" />
+        <a href="https://blinkit.com" target="_blank">Blinkit</a>
+      </div>
+      <div class="delivery-card">
+        <img src="creator/zomato.jpg" alt="Zomato Logo" class="logo" />
+        <a href="https://www.zomato.com" target="_blank">Zomato</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Leaflet JS for map functionality -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    let map;
+    let userLocationMarker;
+    const nearbyPlaces = [];
+
+    // Initialize the map
+    function initMap() {
+      map = L.map('map').setView([51.505, -0.09], 13);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
+
+      locateUser();
+    }
+
+    // Locate the user's current position
+    function locateUser() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition((position) => {
+          const latlng = [position.coords.latitude, position.coords.longitude];
+          map.setView(latlng, 13);
+          addUserMarker(latlng);
+          fetchNearbyPlaces(latlng[0], latlng[1]);
+        }, (error) => {
+          alert(error.message);
+        });
+      } else {
+        alert('Geolocation is not supported by this browser.');
+      }
+    }
+
+    // Add a marker for the user's location
+    function addUserMarker(latlng) {
+      if (userLocationMarker) {
+        map.removeLayer(userLocationMarker);
+      }
+      userLocationMarker = L.marker(latlng).addTo(map).bindPopup('You are here!').openPopup();
+    }
+
+    // Fetch nearby places (restaurants and grocery stores) from Overpass API
+    function fetchNearbyPlaces(lat, lng) {
+      const radius = 5000; // Radius in meters
+      const overpassApiUrl = `https://overpass-api.de/api/interpreter?data=[out:json];node(around:${radius},${lat},${lng})[amenity~"restaurant|supermarket|grocery_store|cafe"];out;`;
+
+      fetch(overpassApiUrl)
+        .then(response => response.json())
+        .then(data => {
+          displayNearbyPlaces(data.elements);
+        })
+        .catch(error => console.error('Error fetching places:', error));
+    }
+
+    // Display the fetched places on the map
+    function displayNearbyPlaces(places) {
+      places.forEach(place => {
+        if (place.lat && place.lon) {
+          const marker = L.marker([place.lat, place.lon]).addTo(map);
+          const name = place.tags.name || 'Unnamed Place';
+          const type = place.tags.amenity || 'Unknown Type';
+          const popupContent = `<b>${name}</b><br>Type: ${type}`;
+          marker.bindPopup(popupContent);
+          nearbyPlaces.push(marker);
+        }
+      });
+    }
+
+    // Handle locating by latitude and longitude input
+    function locateByLatLng() {
+      const latitude = parseFloat(document.getElementById('latitude').value);
+      const longitude = parseFloat(document.getElementById('longitude').value);
+
+      if (!isNaN(latitude) && !isNaN(longitude)) {
+        const latlng = [latitude, longitude];
+        map.setView(latlng, 13);
+        addUserMarker(latlng);
+        fetchNearbyPlaces(latitude, longitude);
+      } else {
+        alert('Please enter valid latitude and longitude values.');
+      }
+    }
+
+    // Initialize the map on page load
+    window.onload = initMap;
+  </script>
+</body>
+</html>

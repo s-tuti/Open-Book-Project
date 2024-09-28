@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Page - Recipe Finder</title>
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMPBLcB8f+pgoH19uYvsZcgZ54qI1cHFt8GvA2" crossorigin="anonymous">
+
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding-top: 100px; /* Space for the fixed navbar */
+            background: linear-gradient(140deg,#FBE9D0, #b4e3e2, #FBE9D0, #b4e3e2);
+        }
+
+        header {
+            position: relative;
+            height: 100px; /* Adjust as needed */
+        }
+
+        nav {
+            padding-top: 20px;
+            padding-bottom: 30px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: linear-gradient(140deg, #FBE9D0, #b4e3e2);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            transition: 1.5s;
+        }
+
+        nav ul {
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 5px 10px;
+        }
+
+        nav ul li a {
+            padding: 2px 10px;
+            color: #2e2e2e;
+            cursor: pointer;
+            transition: .6s ease, transform 0.4s ease;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            color: #fff;
+            border-radius: 5px;
+            transform: scale(1.1);
+            font-size: 20px;
+            background: linear-gradient(to right, #E64833, #bc8c80);
+        }
+
+        .active {
+            color: #fff;
+            font-size: 20px;
+            border-radius: 5px;
+            background: linear-gradient(to right, #E64833, #bc8c80);
+        }
+
+        .get-started {
+            margin-left: 50px;
+            padding: 5px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 20px;
+            transition: background-color 0.7s ease, transform 0.4s ease;
+            background: linear-gradient(to right, #E64833, #bc8c80);
+            color: #fff;
+        }
+
+        .get-started:hover {
+            color: #2e2e2e;
+            transform: scale(1.1);
+            background: #c6a199;
+        }
+
+        .logo img {
+            width: 75px;
+            cursor: pointer;
+            transition: all 1s;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #000000;
+            margin-bottom: 30px;
+        }
+
+        .join-discord {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .join-discord a {
+            background: linear-gradient(to right, #E64833, #bc8c80);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.7s ease, transform 0.4s ease;
+            display: inline-flex;
+            align-items: center; /* Align items vertically */
+        }
+
+        .join-discord a i {
+            margin-right: 8px; /* Space between icon and text */
+        }
+
+        .join-discord a:hover {
+            color: #000000;
+            transform: scale(1.1);
+            background: linear-gradient(to right,  #d54530, #1b2a33);
+        }
+
+        .stories-section {
+            margin-top: 40px;
+        }
+
+        .story-form {
+            background: linear-gradient(to right, #E64833, #bc8c80);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .story-form textarea {
+            width: 97%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            margin-bottom: 10px;
+            resize: none;
+        }
+
+        .story-form button {
+            background-color: #cf926f;
+            color: rgb(0, 0, 0);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .stories-list {
+            margin-top: 20px;
+        }
+
+        .story {
+            background: linear-gradient(10deg, #98b8b7, #ffc5b6);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .story-author {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #000000;
+        }
+
+        .story p {
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <nav>
+            <div class="logo"><a href="index.html"><img src="icon/icon.jpeg" alt="logo"></a></div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#services_section">Utility</a></li>
+                <li><a href="help.html">Help</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="mapCompo.html">Map</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Welcome to the Community Page</h1>
+
+        <!-- Join Discord Section -->
+        <div class="join-discord">
+            <p>Join our Discord to connect with fellow cooking enthusiasts!</p>
+            <a href="https://discord.gg/mxQEgc3j" target="_blank">
+                <i class="fab fa-discord"></i> Join Discord
+            </a>
+        </div>
+
+        <!-- Stories Section -->
+        <div class="stories-section">
+            <h2>Share Your Cooking Stories</h2>
+
+            <!-- Story Form -->
+            <div class="story-form">
+                <textarea id="story-text" rows="5" placeholder="Share your cooking experience here..."></textarea>
+                <button onclick="postStory()">Post Story</button>
+            </div>
+
+            <!-- Posted Stories -->
+            <div class="stories-list" id="stories-list">
+                <!-- Dummy stories -->
+                <div class="story">
+                    <p class="story-author">Posted by Alice:</p>
+                    <p>I tried a new lasagna recipe today, and it turned out amazing! The secret ingredient was ricotta cheese mixed with a little nutmeg.</p>
+                </div>
+                <div class="story">
+                    <p class="story-author">Posted by Bob:</p>
+                    <p>Just made a batch of chocolate chip cookies using dark chocolate and sea salt. The combination of sweet and salty was perfect!</p>
+                </div>
+                <div class="story">
+                    <p class="story-author">Posted by Charlie:</p>
+                    <p>I experimented with making homemade sushi. The rolling process was tricky, but the result was totally worth it.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Assume that userName is fetched from backend or session storage
+        const userName = 'John Doe'; // Replace this with actual user data
+
+        // Post story function
+        function postStory() {
+            const storyText = document.getElementById('story-text').value;
+            if (storyText.trim() === "") {
+                alert("Please write a story before posting.");
+                return;
+            }
+
+            // Create a new story element
+            const story = document.createElement('div');
+            story.className = 'story';
+
+            // Add author and story text
+            const storyAuthor = document.createElement('p');
+            storyAuthor.className = 'story-author';
+            storyAuthor.textContent = `Posted by ${userName}:`;
+
+            const storyContent = document.createElement('p');
+            storyContent.textContent = storyText;
+
+            // Append author and story text to the story
+            story.appendChild(storyAuthor);
+            story.appendChild(storyContent);
+
+            // Append the new story to the stories list
+            const storiesList = document.getElementById('stories-list');
+            storiesList.prepend(story); // Add the new story at the top
+
+            // Clear the textarea
+            document.getElementById('story-text').value = "";
+        }
+    </script>
+</body>
+</html>

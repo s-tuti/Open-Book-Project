@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="shortcut icon" type="png" href="icon/favicon.png">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Comaptible" content="IE=edge">
+  <title>OpenBook</title>
+  <meta name="desciption" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src="script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+  <script>
+    $(window).on('scroll', function () {
+      if ($(window).scrollTop()) {
+        $('nav').addClass('black');
+      } else {
+        $('nav').removeClass('black');
+      }
+    })
+  </script>
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <header id="header">
+    <nav>
+      <div class="logo"><a href="index.html" ><img src="icon/icon.jpeg" alt="logo"></a></div>
+      <ul>
+        <li><a href="#about_section">About Us</a></li>
+        <li><a href="#services_section">Utility</a></li>
+        <li><a href="help.html">Help</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="mapCompo.html">Map</a></li>
+      </ul>
+      <a class="get-started" href="login.html">Login</a>
+      <img src="icon/menu.png" class="menu" onclick="sideMenu(0)" alt="menu">
+    </nav>
+    <div class="head-container">
+      <div class="quote">
+        <p><b>Where recipes meet relaxation, and community becomes comfort.</b></p>
+        <h3>Welcome to Open Book, your ultimate destination for delicious recipes, fun games, and a vibrant community. Discover, share, and enjoy culinary delights with friends and family!
+        </h3>
+        <!--<div class="play">
+          <iframe width="600" height="315" src="https://www.youtube.com/embed/6rximumNc9c?si=zr21THPTd076koTA"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>-->
+      </div>
+      <div class="svg-image">
+        <img src="icon/some_more.jpeg" width="460" height="510" alt="svg">
+      </div>
+    </div>
+    <div class="side-menu" id="side-menu">
+      <div class="close" onclick="sideMenu(1)"><img src="icon/close.png" alt=""></div>
+      <div class="user">
+        <img src="creator/Stuti.png" alt="Username">
+        <p>Stuti2345</p>
+      </div>
+      <ul>
+        <li><a href="#about_section">About</a></li>
+        <li><a href="#portfolio_section">Portfolio</a></li>
+        <li><a href="#team_section">Team</a></li>
+        <li><a href="#services_section">Services</a></li>
+        <li><a href="#contactus_section">Contact</a></li>
+        <li><a href="#feedBACK">Feedback</a></li>
+      </ul>
+    </div>
+  </header>
+
+
+  <!-- Some Popular Subjects -->
+  <!--<div class="title">
+    <span><b>Popular Subjects on OpenBook</b></span>
+  </div>
+  <br><br>
+  <div class="course">
+    <center>
+      <div class="cbox">
+        <div class="det"><a href="subjects/jee.html"><img src="courses/book.png">JEE Preparation</a></div>
+        <div class="det"><a href="subjects/gate.html"><img src="courses/d1.png">GATE Preparation</a></div>
+        <div class="det"><a href="subjects/jee.html#sample_papers"><img src="courses/paper.png">Sample Papers</a>
+        </div>
+        <div class="det"><a href="subjects/quiz.html"><img src="courses/d1.png">Daily Quiz</a></div>
+      </div>
+    </center>
+    <div class="cbox">
+      <div class="det"><a href="subjects/computer_courses.html"><img src="courses/computer.png">Computer
+          Courses</a></div>
+      <div class="det"><a href="subjects/computer_courses.html#data"><img src="courses/data.png">Data
+          Structures</a></div>
+      <div class="det"><a href="subjects/computer_courses.html#algo"><img src="courses/algo.png">Algorithm</a>
+      </div>
+      <div class="det det-last"><a href="subjects/computer_courses.html#projects"><img
+            src="courses/projects.png">Projects</a></div>
+    </div>
+  </div>-->
+
+
+  <!-- ABOUT -->
+  <div class="diffSection" id="about_section">
+    <center>
+      <p style="font-size: 70px; padding: 100px">ABOUT</p>
+    </center>
+    <div class="about-content">
+      <div class="side-image">
+        <img class="sideImage" src="icon/Avbou.jpeg" width="600" height="420">
+      </div>
+      <div class="side-text">
+        <h2>What you may Expect ?</h2>
+        <p>Welcome to Open Book, your ultimate culinary companion! Our app offers a delightful blend of features: discover easy-to-make recipes, trending dishes, and comforting meals. Connect with our community via Discord, share stories, and post photos. Access helpline numbers, home remedies, and first aid tips in Small Medico. Search recipes by ingredients, track calories, and find nutrition info. Enjoy relaxing music, binge-worthy movies, and create albums. For single parents, find easy snacks for kids. Join us in creating a vibrant, supportive space where food, fun, and friendship come together. Explore, share, and enjoy the journey with Open Book!
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- PORTFOLIO -->
+  <!--<div class="diffSection" id="portfolio_section">
+    <center>
+      <p style="font-size: 70px; padding: 100px; padding-bottom: 40px;"><b>Portfolio</b></p>
+    </center>
+    <div class="content">
+      <p>
+        “Education is the passport to the future, for tomorrow belongs to those who prepare for it today.” “Your
+        attitude, not your aptitude, will determine your altitude.” “If you think education is expensive, try
+        ignorance.” “The only person who is educated is the one who has learned how to learn …and change.”
+      </p>
+    </div>
+  </div>
+  <div class="extra">
+    <p>We're increasing this data every year</p>
+    <div class="smbox">
+      <span>
+        <center>
+          <div class="data">254</div>
+          <div class="det">Enrolled Students</div>
+        </center>
+      </span>
+      <span>
+        <center>
+          <div class="data">62</div>
+          <div class="det">Total Courses</div>
+        </center>
+      </span>
+      <span>
+        <center>
+          <div class="data">54</div>
+          <div class="det">Placed Students</div>
+        </center>
+      </span>
+      <span>
+        <center>
+          <div class="data">27</div>
+          <div class="det">Total Projects</div>
+        </center>
+      </span>
+    </div>
+  </div>-->
+
+
+  <!-- TEAM -->
+  <div class="diffSection" id="team_section">
+    <center>
+      <p style="font-size: 50px; padding-top: 100px; padding-bottom: 60px;"><b>We're the Creators</b></p>
+    </center>
+    <div class="totalcard">
+      <!-- Card 1 -->
+      <div class="card">
+        <center><img src="creator/Stuti.png"></center>
+        <center>
+          <div class="card-title">Stuti Tiwari</div>
+          <div id="detail">
+            <p>“ Passionate about bringing people together through food, I created Open Book to share the joy of cooking, connect with fellow food lovers, and build a community where everyone can find comfort and inspiration in the kitchen. It's great to see you here!“</p>
+            <div class="duty"></div>
+            <a href="https://www.linkedin.com/in/stuti10/" target="_blank"><button class="btn-roshan">Follow +</button></a>
+          </div>
+        </center>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <center><img src="creator/daper_shrey.jpg"></center>
+        <center>
+          <div class="card-title">Shrey Kothari</div>
+          <div id="detail">
+            <p>“ Driven by a love for culinary creativity and community, I designed Open Book to be a haven where food enthusiasts can discover new recipes, share their culinary journeys, and find joy and comfort in every dish. Hope you'll like the initiative from my end!!“</p>
+            <div class="duty"></div>
+            <a href="https://www.linkedin.com/in/shrey-kothari-4595a128b/" target="_blank"><button class="btn-akhil">Follow +</button></a>
+          </div>
+        </center>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <center><img src="creator/muskan.jpg"></center>
+        <center>
+          <div class="card-title">Muskaan Aggarwal</div>
+          <div id="detail">
+            <p>“Inspired by the magic of cooking and the warmth of community, I created Open Book to bring together food lovers from all walks of life. Here, you can explore diverse recipes, share your culinary adventures, and find a sense of belonging in every meal. “</p>
+            <div class="duty"></div>
+            <a href="https://www.linkedin.com/in/shrey-kothari-4595a128b/" target="_blank"><button class="btn-akhil">Follow +</button></a>
+          </div>
+        </center>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card">
+        <center><img src="creator/kb.jpg"></center>
+        <center>
+          <div class="card-title">Krishang Bose</div>
+          <div id="detail">
+            <p>“ Fueled by a passion for food and connection, I envisioned Open Book as a sanctuary for culinary enthusiasts. It’s a place where you can uncover new recipes, share your kitchen stories, and experience the joy and comfort that comes from cooking and community. “</p>
+            <div class="duty"></div>
+            <a href="https://www.linkedin.com/in/shrey-kothari-4595a128b/" target="_blank"><button class="btn-akhil">Follow +</button></a>
+          </div>
+        </center>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SERVICES -->
+  <div class="service-swipe">
+    <div class="diffSection" id="services_section">
+      <center>
+        <p style="font-size: 70px; padding: 100px; padding-bottom: 40px; color: #fff;"><b>UTILITY STORE</b></p>
+      </center>
+    </div>
+    
+    <a href="trending.html" >
+      <div class="s-card"><img src="projects/trending.jpg">
+        <p>TRENDING RECIPE</p>
+      </div>
+    </a>
+    <a href="#">
+      <div class="s-card"><img src="projects/health.jpg">
+        <p>FOR HEALTH FREAKS</p>
+      </div>
+    </a>
+    <a href="subjects/jee.html#sample_papers">
+      <div class="s-card"><img src="projects/home-sick.jpg">
+        <p>FOR HOME SICK</p>
+      </div>
+    </a>
+    <a href="#">
+      <div class="s-card"><img src="projects/parents.jpg">
+        <p>FOR PARENTS</p>
+      </div>
+    </a>
+
+    <a href="subjects/computer_courses.html">
+      <div class="s-card"><img src="projects/recipe-add.jpg">
+        <p>SEARCH BY RECIPE BY INGREDIENTS</p>
+      </div>
+    </a>
+    
+    <a href="recipe_add.html">
+      <div class="s-card"><img src="projects/recipe-search.jpg">
+        <p>MY RECIPES</p>
+      </div>
+    </a>
+    <a href="music.html">
+      <div class="s-card"><img src="projects/music.jpg">
+        <p>MUSIC</p>
+      </div>
+    </a>
+    <a href="Movies.html">
+      <div class="s-card"><img src="projects/movies.jpg">
+        <p>MOVIES</p>
+      </div>
+    </a>
+  </div>
+
+  <!-- Reviews by Students -->
+  <div id="makeitfull">
+    <a href="#review_section"><img src="icon/makeitfull.png"></a>
+  </div>
+  <div class="review">
+    <div class="diffSection" id="review_section">
+      <center>
+        <p style="font-size: 60px; padding: 100px; padding-bottom: 40px; color: #2E3D49;"><b>What the Students say About
+            Us?</b></p>
+      </center>
+    </div>
+    <div class="rev-container">
+      <div class="rev-card">
+        <div class="identity">
+          <img src="icon/discussion.png">
+          <p>Manoj Kumar Sharma</p>
+          <h6>IAS Aspirant</h6>
+          <div class="rating"><img src="icon/star.png"><img src="icon/star.png"><img
+              src="icon/star.png"><img src="icon/star.png"><img src="icon/star.png"></div>
+        </div>
+        <div class="rev-cont">
+          <p id="title">Review:</p>
+          <p id="content">
+            “Open Book has completely transformed my cooking experience! The recipes are incredibly easy to follow, and the supportive community makes it even more enjoyable. I love discovering new dishes and sharing my culinary creations with others. It’s the perfect app for anyone looking to enhance their cooking skills and connect with fellow food enthusiasts”
+          </p>
+        </div>
+      </div>
+      <div class="rev-card">
+        <div class="identity">
+          <img src="icon/discussion.png">
+          <p>Kusum "datto" Kumari</p>
+          <h6>DU Student</h6>
+          <div class="rating"><img src="icon/star.png"><img src="icon/star.png"><img
+              src="icon/star.png"><img src="icon/star.png"><img src="icon/star.png"></div>
+        </div>
+        <div class="rev-cont">
+          <p id="title">Review:</p>
+          <p id="content">
+            I absolutely love Comfort Kitchen! The variety of recipes is amazing, and the fun games add an extra layer of enjoyment. It’s my go-to app for both cooking and relaxation. The community aspect is fantastic, allowing me to connect with other food lovers and share our experiences. Highly recommend it to anyone who loves cooking and having fun!
+          </p>
+        </div>
+      </div>
+      <div class="rev-card">
+        <div class="identity">
+          <img src="icon/discussion.png">
+          <p>Munna Tripathi/Bhaiya</p>
+          <h6>Jee Aspirant - Living in KOTA</h6>
+          <div class="rating"><img src="icon/star.png"><img src="icon/star.png"><img
+              src="icon/star.png"><img src="icon/star.png"><img src="icon/star.png"></div>
+        </div>
+        <div class="rev-cont">
+          <p id="title">Review:</p>
+          <p id="content">
+            The health section of Comfort Kitchen is a game-changer! I can easily find nutritious recipes and track my calories, which helps me stay on top of my health goals. The app is user-friendly and packed with useful features. It’s a must-have for anyone looking to maintain a healthy lifestyle while enjoying delicious meals.
+          </p>
+        </div>
+      </div>
+      <div class="rev-card">
+        <div class="identity">
+          <img src="icon/discussion.png">
+          <p> Phunsuk Wangdu a.k.a Rancho</p>
+          <h6>Corporate Worker</h6>
+          <div class="rating"><img src="icon/star.png"><img src="icon/star.png"><img
+              src="icon/star.png"><img src="icon/star.png"><img src="icon/star.png"></div>
+        </div>
+        <div class="rev-cont">
+          <p id="title">Review:</p>
+          <p id="content">
+            As a student living alone, Comfort Kitchen has been a lifesaver. The easy and quick recipes are perfect for my busy schedule, and the community support makes me feel connected even when I’m far from home. The app has made cooking enjoyable and stress-free, and I can’t thank Comfort Kitchen enough for making my life easier!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT US -->
+  <div class="diffSection" id="contactus_section">
+    <center>
+      <p style="font-size: 50px; padding: 100px">Contact Us</p>
+    </center>
+    <div class="csec"></div>
+    <div class="back-contact">
+      <div class="cc">
+        <form action="mailto:stutijb.1408@gmail.com@gmail.com" method="post" enctype="text/plain">
+          <label>First Name <span class="imp">*</span></label><label style="margin-left: 185px">Last Name <span
+              class="imp">*</span></label><br>
+          <center>
+            <input type="text" name="" style="margin-right: 10px; width: 175px" required="required"><input type="text"
+              name="lname" style="width: 175px" required="required"><br>
+          </center>
+          <label>Email <span class="imp">*</span></label><br>
+          <input type="email" name="mail" style="width: 100%" required="required"><br>
+          <label>Message <span class="imp">*</span></label><br>
+          <input type="text" name="message" style="width: 100%" required="required"><br>
+          <label>Additional Details</label><br>
+          <textarea name="addtional"></textarea><br>
+          <button type="submit" id="csubmit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- FEEDBACK -->
+  <div class="title2" id="feedBACK">
+    <span>Give Feedback</span>
+    <div class="shortdesc2">
+      <p>Please share your valuable feedback to us</p>
+    </div>
+  </div>
+
+  <div class="feedbox">
+    <div class="feed">
+      <form action="mailto:stutijb.1408@gmail.com" method="post" enctype="text/plain">
+        <label>Your Name</label><br>
+        <input type="text" name="" class="fname" required="required"><br>
+        <label>Email</label><br>
+        <input type="email" name="mail" required="required"><br>
+        <label>Additional Details</label><br>
+        <textarea name="addtional"></textarea><br>
+        <button type="submit" id="csubmit">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Sliding Information -->
+  <marquee style="background: linear-gradient(to right, #FA4B37, #DF2771); margin-top: 50px;" direction="left"
+    onmouseover="this.stop()" onmouseout="this.start()" scrollamount="20">
+    <div class="marqu">Discover a world of delicious recipes -- Join our vibrant community -- Share your culinary creations -- Enjoy fun games and activities -- Connect with friends and family -- Find your comfort zone -- Post photos of your favorite dishes -- Create and share albums -- Celebrate food and friendship</div>
+  </marquee>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="left-col">
+        <img src="icon/icon.jpeg" style="width: 90px;">
+        <div class="logo"></div>
+        <div class="social-media">
+          <a href="#"><img src="icon\fb.png"></a>
+          <a href="#"><img src="icon\insta.png"></a>
+          <a href="#"><img src="icon\tt.png"></a>
+          <a href="#"><img src="icon\ytube.png"></a>
+          <a href="#"><img src="icon\linkedin.png"></a>
+        </div><br><br>
+        <p class="rights-text">Copyright © 2024 Created By Team Tacos All Rights Reserved.</p>
+        <br>
+        <p><img src="icon/location.png"> Google Meet!</p><br>
+        <p><img src="icon/phone.png"> +91-1234-567-890<br><img src="icon/mail.png">&nbsp;
+          opentobook@gmail.com</p>
+      </div>
+      <div class="right-col">
+        <h1 style="color: #fff">Our Newsletter</h1>
+        <div class="border"></div><br>
+        <p>Enter Your Email to get our News and updates.</p>
+        <form class="newsletter-form">
+          <input class="txtb" type="email" placeholder="Enter Your Email">
+          <input class="btn" type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

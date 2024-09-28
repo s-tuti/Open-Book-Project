@@ -1,0 +1,231 @@
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+.black {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+nav {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  top: 0;
+  position: fixed;
+  display: flex;
+  width: 100%;
+  z-index: 1000;
+  background: linear-gradient(140deg, #FBE9D0, #b4e3e2, #FBE9D0, #b4e3e2);
+  justify-content: space-around;
+  transition: 1.5s;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  list-style: none;
+  margin: 10px 20px;
+}
+
+nav ul li a {
+  padding: 2px 10px;
+  color: #2e2e2e;
+  cursor: pointer;
+  transition: .6s ease, transform 0.4s ease;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #fff;
+  border-radius: 5px;
+  transform: scale(1.1);
+  font-size: 20px;
+  background: linear-gradient(to right, #E64833, #bc8c80);
+}
+
+.active {
+  color: #fff;
+  font-size: 20px;
+  border-radius: 5px;
+  background: linear-gradient(to right, #E64833, #bc8c80);
+}
+
+.get-started {
+  margin-left: 50px;
+  padding: 5px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 20px;
+
+  transition: background-color 0.7s ease, transform 0.4s ease;
+  background: linear-gradient(to right, #E64833, #bc8c80);
+  color: #fff;
+}
+
+.get-started:hover {
+  color: #2e2e2e;
+  transform: scale(1.1);
+  background: #c6a199;
+}
+
+.logo img {
+  width: 75px;
+  cursor: pointer;
+  transition: all 1s;
+}
+
+a,
+button {
+  float: left;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: #2E3D49;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+}
+
+.head-container {
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* Header Styling */
+header {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f8d8c1;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 36px;
+  color: #333;
+}
+
+header p {
+  font-size: 18px;
+  color: #555;
+}
+
+/* Carousel Section */
+.carousel {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.carousel-item {
+  min-width: 100%;
+  transition: transform 0.5s ease;
+  text-align: center;
+}
+
+.carousel-item img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.carousel h1 {
+  font-size: 24px;
+  margin-top: 15px;
+  color: #333;
+}
+
+/* Carousel Buttons */
+.carousel-button {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 24px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  padding: 10px;
+  transition: background-color 0.3s;
+}
+
+.carousel-button:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.carousel button:first-child {
+  left: 20px;
+}
+
+.carousel button:last-child {
+  right: 20px;
+}
+
+/* Video Section */
+
+.videos-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.videos-section iframe {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  border: none;
+}
+
+.video-list {
+  margin: 20px;
+}
+
+.video-list h3 {
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 22px;
+}
+
+.video-item {
+  display: inline-block;
+  margin: 10px;
+  text-align: center;
+}
+
+.video-item img {
+  width: 150px;
+  height: 100px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.video-item p {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  font-size: 14px;
+}

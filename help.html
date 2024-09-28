@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help Page</title>
+  <style>
+    
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(140deg,#FBE9D0, #b4e3e2, #FBE9D0, #b4e3e2);
+      color: #000000;
+    }
+
+    header {
+      height: 130px;
+      /* background: #000; */
+    }
+
+    .black {
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    nav {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      top: 0;
+      position: fixed;
+      display: flex;
+      width: 100%;
+      z-index: 1000;
+      background: linear-gradient(140deg, #FBE9D0, #b4e3e2, #FBE9D0, #b4e3e2);
+      justify-content: space-around;
+      transition: 1.5s;
+      align-items: center;
+    }
+
+    nav ul {
+      display: flex;
+      align-items: center;
+    }
+
+    nav ul li {
+      list-style: none;
+      margin: 10px 20px;
+    }
+
+    nav ul li a {
+      padding: 2px 10px;
+      color: #2e2e2e;
+      cursor: pointer;
+      transition: .6s ease, transform 0.4s ease;
+      text-decoration: none;
+    }
+
+    nav ul li a:hover {
+      color: #fff;
+      border-radius: 5px;
+      transform: scale(1.1);
+      font-size: 20px;
+      background: linear-gradient(to right, #E64833, #bc8c80);
+    }
+
+    .active {
+      color: #fff;
+      font-size: 20px;
+      border-radius: 5px;
+      background: linear-gradient(to right, #E64833, #bc8c80);
+    }
+
+    .get-started {
+      margin-left: 50px;
+      padding: 5px 20px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-size: 20px;
+
+      transition: background-color 0.7s ease, transform 0.4s ease;
+      background: linear-gradient(to right, #E64833, #bc8c80);
+      color: #fff;
+    }
+
+    .get-started:hover {
+      color: #2e2e2e;
+      transform: scale(1.1);
+      background: #c6a199;
+    }
+
+    .logo img {
+      width: 75px;
+      cursor: pointer;
+      transition: all 1s;
+    }
+
+    a,
+    button {
+      float: left;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 500;
+      font-size: 15px;
+      color: #2E3D49;
+      display: block;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    .head-container {
+      margin-top: 100px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .container {
+      width: 80%;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #194066;
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    .helpline-numbers ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .helpline-numbers ul li {
+      background: linear-gradient(to right, #E64833, #bc8c80);
+      color: #ffffff;
+      padding: 10px;
+      margin: 5px 0;
+      border-radius: 5px;
+    }
+
+    .call-chef {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .call-chef-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    .call-chef-table th, .call-chef-table td {
+      border: 1px solid #f5eded;
+      padding: 10px;
+      text-align: left;
+    }
+
+    .call-chef-table th {
+        background: linear-gradient(to right,  #d54530, #1b2a33);
+      color: rgb(255, 255, 255);
+    }
+
+    .call-chef button {
+      padding: 10px 20px;
+      background-color: #e74c3c;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .videos-section {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .videos-section iframe {
+      width: 100%;
+      height: 200px;
+      border-radius: 10px;
+      border: none;
+    }
+
+    .remedies ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .remedies ul li {
+      margin-bottom: 10px;
+    }
+
+    .remedy-item h3 {
+      margin-bottom: 5px;
+      color: #e74c3c;
+    }
+
+    .remedy-item ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    .first-aid-videos {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .first-aid-videos iframe {
+      width: 100%;
+      height: 200px;
+      border-radius: 10px;
+      border: none;
+    }
+  </style>
+  <header id="header">
+    <nav>
+      <div class="logo"><a href="index.html" ><img src="icon/icon.jpeg" alt="logo"></a></div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#services_section">Utility</a></li>
+        <li><a href="#team_section">Help</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="mapCompo.html">Map</a></li>
+      </ul>
+    </nav>
+  </header>
+</head>
+<body>
+
+<div class="container">
+  <h1>Help & Support</h1>
+
+  <!-- Helpline Numbers Section -->
+  <div class="section helpline-numbers">
+    <h2>Helpline Numbers</h2>
+    <ul>
+      <li>Emergency: 112</li>
+      <li>Health Helpline: 1800-102-2222</li>
+      <li>Fire Department: 101</li>
+      <li>Police: 100</li>
+    </ul>
+  </div>
+
+  <!-- Call a Chef Section -->
+  <div class="section call-chef">
+    <h2>Call a Chef</h2>
+    <table class="call-chef-table">
+      <thead>
+        <tr>
+          <th>Chef Name</th>
+          <th>Description</th>
+          <th>Contact</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td>Archana Desai</td>
+          <td>A homemaker who enjoys cooking wholesome, flavorful meals.She loves incorporating fresh ingredients to create healthy versions of traditional recipes.</td>
+          <td>Phone: +91-96321-56984<br>Email: Archnadesai@gmail.com</td>
+        </tr>
+        <tr>
+          <td>Li Wei</td>
+          <td>Famous for authentic Chinese cuisine, particularly in momo and noodles.</td>
+          <td>Phone: +91-69352-46895<br>Email: liwei@gmail.com</td>
+        </tr>
+        <tr>
+          <td>Chef Aisha Khan</td>
+          <td>Specialist in Middle Eastern and Indian fusion, offering private cooking lessons.</td>
+          <td>Phone: +91-97635-29878<br>Email: khanaisha@gmail.com</td>
+        </tr>
+        <tr>
+          <td>Chef Mahira Kapoor</td>
+          <td>Michelin-starred pastry chef, best known for innovative dessert recipes.</td>
+          <td>Phone: +91-98974-92464<br>Email: Mahira9897@gmail.com</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Training Videos Section -->
+  <div class="section">
+    <h2>Training Videos</h2>
+    <div class="videos-section">
+        <iframe src="https://www.youtube.com/embed/G-Fg7l7G1zw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/BRvumXrbGIw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/NzipqJyQ_Bg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/sqg-q9EHlJA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/-_AztS7q_Nc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/Cw8axtTVs-0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/sT_3q1kSuIQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/Q6udZLwaYG8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- Home Remedies Section -->
+  <div class="section remedies">
+    <h2>Home Remedies</h2>
+
+    <div class="remedy-item">
+      <h3>1. Cold and Flu</h3>
+      <ul>
+        <li>Ginger Tea: Boil fresh ginger slices in water, add honey and lemon.</li>
+        <li>Steam Inhalation: Add eucalyptus oil to hot water and inhale the steam.</li>
+        <li>Salt Water Gargle: Gargle with warm salt water.</li>
+      </ul>
+    </div>
+
+    <div class="remedy-item">
+      <h3>2. Headache</h3>
+      <ul>
+        <li>Peppermint Oil: Apply diluted peppermint oil to the temples.</li>
+        <li>Ginger Tea: Ginger reduces inflammation.</li>
+        <li>Cold Compress: Apply a cold compress to the forehead.</li>
+      </ul>
+    </div>
+
+    <div class="remedy-item">
+      <h3>3. Indigestion</h3>
+      <ul>
+        <li>Apple Cider Vinegar: Mix 1-2 tablespoons in warm water before meals.</li>
+        <li>Fennel Seeds: Chew fennel seeds after meals.</li>
+        <li>Ginger: Consume ginger to soothe indigestion.</li>
+      </ul>
+    </div>
+
+    <div class="remedy-item">
+      <h3>4. Acne</h3>
+      <ul>
+        <li>Tea Tree Oil: Apply diluted tea tree oil to the affected areas.</li>
+        <li>Honey and Cinnamon Mask: Mix honey and cinnamon into a paste.</li>
+        <li>Aloe Vera Gel: Apply fresh aloe vera gel to the skin.</li>
+      </ul>
+    </div>
+
+    <div class="remedy-item">
+      <h3>5. Cough</h3>
+      <ul>
+        <li>Honey and Lemon: Mix honey with lemon juice in warm water.</li>
+        <li>Turmeric Milk: Warm milk with turmeric helps dry cough.</li>
+      </ul>
+    </div>
+
+    <div class="remedy-item">
+      <h3>6. Sore Muscles</h3>
+      <ul>
+        <li>Epsom Salt Bath: Soak in a bath with Epsom salt.</li>
+        <li>Arnica Gel: Apply arnica gel to reduce muscle inflammation.</li>
+      </ul>
+    </div>
+
+    <div class="remedy-item">
+      <h3>7. Dandruff</h3>
+      <ul>
+        <li>Coconut Oil: Massage warm coconut oil into the scalp.</li>
+        <li>Apple Cider Vinegar Rinse: Use apple cider vinegar as a final rinse after shampooing.</li>
+      </ul>
+    </div>
+
+    <div class="remedy-item">
+      <h3>8. Constipation</h3>
+      <ul>
+        <li>Prune Juice:
+            Drinking prune juice or eating dried prunes is a natural laxative.</li>
+            <li>Flaxseed: Add ground flaxseed to smoothies or oatmeal to increase fiber intake.</li>
+          </ul>
+        </div>
+
+        <div class="remedy-item">
+          <h3>9. Insomnia</h3>
+          <ul>
+            <li>Chamomile Tea: Drinking chamomile tea before bed helps relax the mind.</li>
+            <li>Lavender Essential Oil: Use lavender oil in a diffuser or apply on your pillow for calming effects.</li>
+          </ul>
+        </div>
+
+        <div class="remedy-item">
+          <h3>10. Sunburn</h3>
+          <ul>
+            <li>Aloe Vera Gel: Apply fresh aloe vera gel to soothe sunburned skin.</li>
+            <li>Cool Milk Compress: Soak a cloth in cold milk and apply to the sunburn.</li>
+          </ul>
+        </div>
+
+        <div class="remedy-item">
+          <h3>11. Toothache</h3>
+          <ul>
+            <li>Clove Oil: Apply a small amount of clove oil to the affected tooth.</li>
+            <li>Saltwater Rinse: Rinse with warm salt water to reduce bacteria and soothe the toothache.</li>
+          </ul>
+        </div>
+
+        <div class="remedy-item">
+          <h3>12. Nausea</h3>
+          <ul>
+            <li>Ginger: Ginger tea or chewing fresh ginger helps alleviate nausea.</li>
+            <li>Peppermint Tea: Peppermint tea has calming effects on the stomach.</li>
+          </ul>
+        </div>
+
+        <div class="remedy-item">
+          <h3>13. Burns</h3>
+          <ul>
+            <li>Aloe Vera: Apply fresh aloe vera gel to minor burns to soothe and heal.</li>
+            <li>Honey: Apply honey to a burn to reduce pain and speed up healing.</li>
+          </ul>
+        </div>
+
+        <div class="remedy-item">
+          <h3>14. Sore Throat</h3>
+          <ul>
+            <li>Saltwater Gargle: Gargling with warm salt water helps reduce throat inflammation.</li>
+            <li>Honey: Taking a spoonful of honey helps coat and soothe the throat.</li>
+          </ul>
+        </div>
+
+        <div class="remedy-item">
+          <h3>15. Earache</h3>
+          <ul>
+            <li>Warm Olive Oil: Put a few drops of warm olive oil in the affected ear to soothe pain.</li>
+            <li>Garlic Oil: Garlic has antibacterial properties; use a drop of garlic-infused oil to relieve earaches.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- First Aid Videos Section -->
+      <div class="section">
+        <h2>First Aid Videos</h2>
+        <div class="first-aid-videos">
+            <iframe src="https://www.youtube.com/embed/AhANvBB9hz0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/0JHNvpQ9JW8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/sauqm3mvJ40" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/8KXBk8WIc50" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/9XpJZv_YsGM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/z_5tuB1YMK0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/IOtnGl_9-qw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/eBINwvHFTnw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>            
+        </div>
+      </div>
+    </div>
+
+    </body>
+    </html>

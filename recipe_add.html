@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Recipes</title>
+    <link rel="stylesheet" href="recipe_add.css">
+
+    <header id="header">
+        <nav>
+          <div class="logo"><a href="index.html"><img src="icon/icon.jpeg" alt="logo"></a></div>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#services_section">Utility</a></li>
+            <li><a href="#team_section">Help</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="mapCompo.html">Map</a></li>
+          </ul>
+        </nav>
+    </header>
+</head>
+<body>
+    
+
+    <div class="container">
+        <h1>My Recipes</h1>
+        <button id="add-recipe-btn">Add a New Recipe</button>
+        <div id="recipe-cards" class="recipe-cards"></div>
+    </div>
+
+    <div id="recipe-modal" class="recipe-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Add Recipe</h2>
+            <input type="text" id="dish-name" placeholder="Dish Name" required>
+            <input type="text" id="cooking-time" placeholder="Cooking Time" required>
+            <textarea id="instructions" placeholder="Instructions" required></textarea>
+            <input type="file" id="image-upload" accept="image/*" required>
+            <button id="submit-recipe-btn">Submit Recipe</button>
+        </div>
+    </div>
+
+    <script src="recipe.js"></script>
+</body>
+</html>
