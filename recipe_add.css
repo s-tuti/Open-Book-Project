@@ -9,9 +9,32 @@ html {
 }
 
 body {
-  background: linear-gradient(100deg, #b4e3e2, #FBE9D0, #b4e3e2, #FBE9D0);
-  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  height: 100vh;
+  position: relative;
+  padding-top: 80px; /* Adjust this value based on the height of your nav */
 }
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #b4e3e2, #FBE9D0, #b4e3e2, #FBE9D0), 
+              url("creator/hja.jpg");
+  background-size: cover;
+  background-blend-mode: overlay;
+  filter: blur(1px); /* Adjust the value to control the blur intensity */
+  z-index: -1; /* Ensures the background stays behind the content */
+}
+
+body * {
+  position: relative; /* Keeps the content on top of the blurred background */
+  z-index: 1;
+}
+
 
 header {
   height: auto;
@@ -70,9 +93,8 @@ nav ul li a:hover {
 .container {
   max-width: 800px;
   margin: auto;
-  margin-top: 120px;
-  /* Adjusted to ensure there's space between nav and container */
-  /* Ensure there’s space between nav and container */
+  margin-top: 20px; /* Ensure there's space between nav and container */
+  padding: 20px;
 }
 
 h1 {
