@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+.about{
+    width: 100%;
+    padding: 0px 0px;
+    background-color: black;
+
+}
+
+.text{
+    width: 550px;
+    margin-top: 20%;
+    margin-left: -60%;
+}
+.main{
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    z-index: 1;
+    right: 5%; /* Adjust as needed */
+    transform: translateY(0%);
+    top: 80%;
+}
+
+.text h1{
+    color:red;
+    font-family: 'Allura', sans-serif;
+    font-size: 50px;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+.text h5{
+    color: white;
+    font-size: 15px;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+.text p{
+    color: #fcfcfc;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+button{
+    background: red;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    transform: .4s;
+}
+button:hover{
+    background: transparent;
+    border: 2px solid red;
+    cursor: pointer;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    background: black;
+    font-family: 'Josefin Sans',sans-serif;
+
+}
+.wrapper{
+    margin-top: 5%;
+
+
+}
+.wrapper h1{
+    font-family:'Josefin Sans', sans-serif;
+    font-size: 62px;
+    margin-bottom: 90px;
+    text-align: center;
+    color: rgb(236, 99, 99);
+}
+.team{
+    display: flex;
+    text-align: center;
+    width: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+.card{
+    width: auto;
+    height: 450px;
+    margin: 10px 10px 50px 10px;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 5px 5px 20px rgb(108, 73, 73) ;
+    position: relative;
+    
+}
+.team .team_member1{
+    background: #fff;
+    margin: 5px 5px 50px 5px;
+    /* margin-bottom: 50px; */
+    width: 400px;
+    padding: 20px;
+    line-height: 20px;
+    color: #8e8b8b;
+    position: relative;
+}
+.team .team_member1 h3{
+    color: #81c644;
+    font-size: 26px;
+    margin-top: 50px;
+}
+.team .team_member1 p.role{
+    color: #ccc;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin: 12px 0;
+
+}
+.team .team_member1 .team_img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: -85px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+}
+.team .team_member1 .team_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+.team .team_member2{
+    background: #fff;
+    margin: 5px;
+    margin-bottom: 50px;
+    width: 400px;
+    padding: 20px;
+    line-height: 20px;
+    color: #8e8b8b;
+    position: relative;
+}
+.team .team_member2 h3{
+    color: #81c644;
+    font-size: 26px;
+    margin-top: 50px;
+}
+.team .team_member2 p.role{
+    color: #ccc;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin: 12px 0;
+
+}
+.team .team_member2 .team_img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: -85px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+}
+.team .team_member2 .team_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+/* Styles for the background image */
+.background {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('yjhd.jpeg.jpg'); /* Replace 'background-image.jpg' with your actual image file */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Styles for the gradient overlay */
+.overlay-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2));
+}
+
+/* Styles for the content
+.content {
+    position: absolute;
+    
+    
+    color: white;
+     /* Ensure content is above the gradient overlay */
+    /* max-width: 70%; /* Adjust as needed */
+/* }
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+} */ 
