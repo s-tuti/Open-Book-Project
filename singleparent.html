@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Freaks</title>
+    <style>
+        body {
+            background: linear-gradient(100deg,#b4e3e2, #FBE9D0, #b4e3e2, #FBE9D0);
+	font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            top: 0;
+            position: fixed;
+            display: flex;
+            width: 100%;
+            z-index: 1000;
+            background: linear-gradient(140deg,#FBE9D0, #b4e3e2, #FBE9D0, #b4e3e2);
+            justify-content: space-around;
+            transition: 1.5s;
+            align-items: center;
+        }
+        nav ul {
+            display: flex;
+            align-items: center;
+        }
+        nav ul li {
+            list-style: none;
+            margin: 10px 20px;
+        }
+        nav ul li a {
+            padding: 2px 10px;
+            color: #2e2e2e;
+            cursor: pointer;
+            transition: .6s ease, transform 0.4s ease;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            color: #fff;
+            border-radius: 5px;
+            transform: scale(1.1);
+            font-size: 20px;
+            background: linear-gradient(to right, #E64833, #bc8c80);
+        }
+        .active {
+            color: #fff;
+            font-size: 20px;
+            border-radius: 5px;
+            background: linear-gradient(to right, #E64833, #bc8c80);
+        }
+
+        .get-started {
+            margin-left: 50px;
+            padding: 5px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 20px;
+            transition: background-color 0.7s ease, transform 0.4s ease;
+            background: linear-gradient(to right, #E64833, #bc8c80);
+            color: #fff;
+        }
+        .get-started:hover {
+            color: #2e2e2e;
+            transform: scale(1.1);
+            background: #c6a199;
+        }
+        .logo img {
+            width: 75px;
+            cursor: pointer;
+            transition: all 1s;
+        }
+        a, button {
+            float: left;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 500;
+            font-size: 15px;
+            color: #2E3D49;
+            display: block;
+            text-decoration: none;
+            text-align: center;
+        }
+        .head-container {
+            margin-top: 245px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        header {
+            text-align: center;
+            padding: 145px 20px 50px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 35px;
+            color: #333;
+        }
+
+        header h2 {
+            font-size: 20px;
+            margin-top: 17px;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            padding: 0 20px; /* Add horizontal padding */
+        }
+
+        .video-grid iframe {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+            border: none;
+        }
+
+        /* Responsive styling for smaller screens */
+        @media (max-width: 900px) {
+            .video-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .video-grid iframe {
+                height: 180px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .video-grid iframe {
+                height: 160px;
+            }
+        }
+         /* Add padding to the bottom to create space */
+         body::after {
+            content: '';
+            display: block;
+            height: 50px; }/* Adjust this value to create more or less space */
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo"><a href="index.html"><img src="icon/icon.jpeg" alt="logo"></a></div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#services_section">Utility</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="mapCompo.html">Map</a></li>
+            <li><a href="help.html">Help</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Welcome Busy Parents!</h1>
+        <h2>Welcome to our time-saving haven! Explore quick, easy recipes and food vlogs designed with busy, working, and single parents in mind. Whether you need fast meals for the family or simple dishes for yourself, we’ve got you covered. Dive in and discover delicious recipes that fit right into your packed schedule!</h2>
+    </header>
+
+    <div class="video-grid">
+        <iframe src="https://www.youtube.com/embed/MPfIYx3jCIg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/LS7iGMX78vc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/9_5wHw6l11o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/i_kHNJ2AVuc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/Z-WOD_xmYMQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/_muhC_eL8Ec" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/aGAiDBJ5Z20" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/eChVFovGZ0o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</body>
+</html>
