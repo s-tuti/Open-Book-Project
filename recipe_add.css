@@ -11,7 +11,7 @@ html {
 body {
   margin: 0;
   height: 100vh;
-  position: relative;
+  position: fixed;
   padding-top: 80px; /* Adjust this value based on the height of your nav */
 }
 
@@ -25,6 +25,7 @@ body::before {
   background: linear-gradient(to right, #b4e3e2, #FBE9D0, #b4e3e2, #FBE9D0), 
               url("creator/hja.jpg");
   background-size: cover;
+  background-attachment: fixed;
   background-blend-mode: overlay;
   filter: blur(1px); /* Adjust the value to control the blur intensity */
   z-index: -1; /* Ensures the background stays behind the content */
@@ -92,9 +93,10 @@ nav ul li a:hover {
 
 .container {
   max-width: 800px;
-  margin: auto;
+  margin: 80px auto 20px auto;
   margin-top: 20px; /* Ensure there's space between nav and container */
   padding: 20px;
+  text-align: center;
 }
 
 h1 {
