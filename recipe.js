@@ -89,3 +89,4 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial load of recipes
     loadRecipes();
 });
+
