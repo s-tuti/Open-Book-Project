@@ -7,24 +7,21 @@
 html {
   scroll-behavior: smooth;
 }
-body {
-  background: linear-gradient(100deg,#b4e3e2, #FBE9D0, #b4e3e2, #FBE9D0);
-  font-family: 'Open Sans', sans-serif;
-}
 
-.black {
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+body {
+  background: linear-gradient(100deg, #b4e3e2, #FBE9D0, #b4e3e2, #FBE9D0);
+  font-family: 'Open Sans', sans-serif;
 }
 
 nav {
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
   top: 0;
   position: fixed;
   display: flex;
   width: 100%;
   z-index: 1000;
-  background: linear-gradient(140deg,#FBE9D0, #b4e3e2, #FBE9D0, #b4e3e2);
+  background: linear-gradient(140deg, #FBE9D0, #b4e3e2, #FBE9D0, #b4e3e2);
   justify-content: space-around;
   transition: 1.5s;
   align-items: center;
@@ -44,7 +41,7 @@ nav ul li a {
   padding: 2px 10px;
   color: #2e2e2e;
   cursor: pointer;
-  transition: .6s ease, transform 0.4s ease;
+  transition: 0.6s ease, transform 0.4s ease;
   text-decoration: none;
 }
 
@@ -56,55 +53,14 @@ nav ul li a:hover {
   background: linear-gradient(to right, #E64833, #bc8c80);
 }
 
-.active {
-  color: #fff;
-  font-size: 20px;
-  border-radius: 5px;
-  background: linear-gradient(to right, #E64833, #bc8c80);
-}
-
-.get-started {
-  margin-left: 50px;
-  padding: 5px 20px;
-  border-radius: 20px;
-  text-decoration: none;
-  font-size: 20px;
-
-  transition: background-color 0.7s ease, transform 0.4s ease;
-  background: linear-gradient(to right, #E64833, #bc8c80);
-  color: #fff;
-}
-
-.get-started:hover {
-  color: #2e2e2e;
-  transform: scale(1.1);
-  background: #c6a199;
-}
-
 .logo img {
   width: 75px;
   cursor: pointer;
   transition: all 1s;
 }
 
-a,
-button {
-  float: left;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-  font-size: 15px;
-  color: #2E3D49;
-  display: block;
-  text-decoration: none;
-  text-align: center;
-}
-
-.head-container {
-  margin-top: 100px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
+main {
+    padding-top: 70px; /* Adjust based on the height of your nav */
 }
 
 .slideshow-container {
@@ -125,61 +81,32 @@ button {
   border-radius: 10px;
 }
 
-/*.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  z-index: 1;
-}*/
-
+.prev,
 .next {
   cursor: pointer;
   position: absolute;
   top: 50%;
-  width: auto;
   padding: 16px;
-  color: white;
+  margin-top: -22px;
+  color: black;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
-  z-index: 1;
-  left: 690px;
-  border-radius: 3px 0 0 3px;
 }
 
-.prev{
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  z-index: 1;
-  left: -50px;
-  border-radius: 3px 0 0 3px;
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
 }
 
 .dot {
-  cursor: pointer;
   height: 15px;
   width: 15px;
   margin: 0 2px;
@@ -189,91 +116,24 @@ button {
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.active,
+.dot:hover {
   background-color: #717171;
 }
 
-
-/* Header Styling */
 header {
   text-align: center;
-  padding: 145px 20px 50px; /* Adjusted padding to ensure there's space between nav and header */
-  /*background-color: #f8d8c1;*/
+  padding: 100px 20px;
 }
 
 header h1 {
-  margin: 0;
-  font-size: 35px;
+  font-size: 42px;
   color: #333;
 }
 
-header h2{
-  font-size: 20px;
-  margin-top: 17px;
-}
-
-header p {
-  font-size: 18px;
+header h2 {
+  font-size: 24px;
   color: #555;
-}
-
-/* Carousel Section */
-.carousel {
-  background: linear-gradient(to right, #E64833, #bc8c80);
-  display: flex;
-  overflow: hidden;
-  position: relative;
-  padding: 20px;
-  margin: 0 auto;
-  max-width: 800px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-}
-
-.carousel-item {
-  min-width: 100%;
-  transition: transform 0.5s ease;
-  text-align: center;
-}
-
-.carousel-item img {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-  border-radius: 10px;
-}
-
-.carousel h1 {
-  font-size: 24px;
-  margin-top: 15px;
-  color: #333;
-}
-
-/* Carousel Buttons */
-.carousel-button {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 24px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-  padding: 10px;
-  transition: background-color 0.3s;
-}
-
-.carousel-button:hover {
-  background-color: rgba(255, 255, 255, 1);
-}
-
-.carousel button:first-child {
-  left: 20px;
-}
-
-.carousel button:last-child {
-  right: 20px;
 }
 
 /* Video Section */
@@ -333,9 +193,35 @@ header p {
 
 
 footer {
+  background-color: #333;
+  color: white;
+  padding: 50px 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-col,
+.right-col {
+  flex: 1;
+}
+
+.right-col {
+  text-align: center;
+}
+
+.social-media img {
+  width: 30px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+footer {
   color: #E5E8EF;
   background: #000D;
-  padding: 30px 0; 
+  padding: 50px 0; 
 }
 footer .footer-container {
   max-width: 1300px;
@@ -347,23 +233,23 @@ footer .footer-container {
   flex-wrap: wrap-reverse;
 }
 footer .social-media img{
-  width: 18px;
+  width: 22px;
 }
 footer .logo {
-  width: 150px;
+  width: 180px;
   color: #fff;
 }
 footer .social-media a{
-  margin-right: 8px;
-  font-size: 18px;
+  margin-right: 10px;
+  font-size: 22px;
   text-decoration: none;
 }
 footer .right-col h1{
-  font-size: 22px;
+  font-size: 26px;
 }
 footer .border{
-  width: 80px;
-  height: 3px;
+  width: 100px;
+  height: 4px;
   background: linear-gradient(to right, #FA4B37, #2783df);
   margin: 2px;
 }
@@ -378,21 +264,21 @@ footer input::placeholder {
 }
 footer .txtb {
   flex: 1;
-  padding: 14px 40px;
-  font-size: 13px;
+  padding: 18px 40px;
+  font-size: 16px;
   background: #343A40;
   border: none;
   font-weight: 700;
   outline: none;
   border-radius: 5px;
-  min-width: 200px;
+  min-width: 260px;
   margin-top: 20px;
   color: white;
 }
 footer .btn {
   margin-top: 20px;
-  padding: 14px 30px;
-  font-size: 13px;
+  padding: 18px 40px;
+  font-size: 16px;
   color: #f1f1f1;
   background: linear-gradient(to right, #FA4B37, #2783df);
   border: none;
