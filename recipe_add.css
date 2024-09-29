@@ -93,7 +93,7 @@ nav ul li a:hover {
 
 /* Container Styles */
 .container {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 40px auto 20px; /* Increased top margin to prevent overlap with navbar */
   padding: 20px;
   background: #FBE9D0;
